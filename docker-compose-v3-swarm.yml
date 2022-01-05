@@ -41,6 +41,7 @@ services:
 
   selenium-hub:
     image: selenium/hub:4.1.1-20211217
+    network: host
     ports:
       - "4442:4442"
       - "4443:4443"
