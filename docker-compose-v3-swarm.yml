@@ -4,7 +4,6 @@
 # Stop swarm mode `docker swarm leave --force`
 
 version: '3.7'
-networks: host
 services:
   chrome:
     image: selenium/node-chrome:4.1.1-20211217
