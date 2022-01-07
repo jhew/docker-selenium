@@ -13,6 +13,7 @@ services:
   chrome:
     image: selenium/node-chrome:4.1.1-20211217
     shm_size: 2gb
+    network: host
     environment:
       - SE_EVENT_BUS_HOST=selenium-hub
       - SE_EVENT_BUS_PUBLISH_PORT=4442
@@ -24,6 +25,7 @@ services:
   edge:
     image: selenium/node-edge:4.1.1-20211217
     shm_size: 2gb
+    network: host
     environment:
       - SE_EVENT_BUS_HOST=selenium-hub
       - SE_EVENT_BUS_PUBLISH_PORT=4442
@@ -35,6 +37,7 @@ services:
   firefox:
     image: selenium/node-firefox:4.1.1-20211217
     shm_size: 2gb
+    network: host
     environment:
       - SE_EVENT_BUS_HOST=selenium-hub
       - SE_EVENT_BUS_PUBLISH_PORT=4442
@@ -45,6 +48,7 @@ services:
 
   selenium-hub:
     image: selenium/hub:4.1.1-20211217
+    network: host
     ports:
       - "4442:4442"
       - "4443:4443"
